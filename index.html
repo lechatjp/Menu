@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+</style>
+<body>
+<header class="bgimg w3-display-container id="Title">
+  <div class="w3-display-bottomleft w3-padding">
+    </div>
+  <div class="w3-display-left w3-left">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px"><br>LE RESTAURANT</span>
+    </div>
+</header>
+<!-- Menu Container -->
+<div class="w3-container w3-blue w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:60px"><br>THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Breakfast');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Breakfast</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Lunch');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Lunch</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dinner</div>
+      </a>
+    </div>
+
+    <div id="Breakfast" class="w3-container menu w3-padding-32 w3-white">
+    <h1><b>Breakfast feast with pancakes</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <p class="w3-text-grey">Scrambled eggs, golden hash browns, hickory-smoked bacon strips and fluffy buttermilk pancakes.</p>
+      <hr>
+
+      <h1><b>Pancake combo</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">Choose a two stack of one of our seasonal pancakes and make it a combo with eggs.</p>
+      <hr>
+
+      <h1><b>Gluten/Friendly Belgian waffle combo</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+      <p class="w3-text-grey">A golden-brown, gluten-friendly Belgian waffle topped with whipped real butter. Served with 2 eggs.</p>
+    </div>
+
+    <div id="Lunch" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Buttermilk crispy chicken feast</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Buttermilk Crispy Chicken Strips, with fries.</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+    </div>
+
+    <div id="Dinner" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Shrimp Scampi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Shrimp sautéed in a garlic sauce, tossed with asparagus, tomatoes, and angel hair pasta.</p>
+      <hr>
+      
+      <h1><b>Herb-Grilled Salmon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Filet grilled to perfection and topped with garlic herb butter. Served with parmesan garlic broccoli.</p>
+      <hr>
+    </div><br>
+  </div>
+</div>
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-xxlarge" id="Our food">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:60px">Our food</h1>
+    <p></p>Today, there are more ways than ever to eat healthy and responsibly while sharing moments together with friends and family. At Olive Garden, while perfect plates of pasta are our best specialty, we're committed to providing a wide range of delicious options so you can enjoy meal that's right for you.</p>
+    <img src="Images/og-herb-grilled-salmon-dpv-590x365.webp" style="width:450px" class="w3-rectangule w3-right"></p>
+    <img src="Images/shrimp-scampi-dpv-590x365.webp" style="width:450px" class="w3-rectangule w3-left">  
+  </div>
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-46 w3-xxlarge">
+  <p class= "w3-text-blue">Powered by <br>Jorge Perdomo and W3Schools.com</p>
+</footer>
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+</body>
+</html>
